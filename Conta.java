@@ -1,15 +1,16 @@
 package br.com.banco;
 
-public class Conta {
+//proibe a instancia da class
+public abstract class Conta {
+	
+	protected Cliente cliente;
+	protected int numConta;
+	protected double saldo;
 
-	Cliente cliente;
-	int numConta;
-	double saldo;
-
-	public Conta(Cliente clinte, int numConta, double saldo) {
+	public Conta(Cliente clinte, int numConta) {
 		this.cliente = clinte;
 		this.numConta = numConta;
-		this.saldo = saldo;
+		
 	}
 
 	public void depositar(double valor) {
@@ -36,9 +37,8 @@ public class Conta {
 		}
 	}//
 
-	public void consultaSaldo() {
-		System.out.println("Nome : " + this.cliente.nome);
-		System.out.println("Saldo : " + this.saldo);
-	}
+	public abstract void consultaSaldo();
+		
+	
 
 }

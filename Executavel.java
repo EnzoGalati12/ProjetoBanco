@@ -5,9 +5,11 @@ public class Executavel {
 	public static void main(String[] args) {
 		Cliente clienteEnzo = new Cliente("Enzo", "Av Paula Ferreira","02/12/2002");
 		Cliente borba = new Cliente("Borba" , "Rua da Aviação","02/11/2003");
-		Conta contaEnzo = new Conta(clienteEnzo, 1,0.0);
-		Conta conta2 = new Conta(borba,2,0.0);
+		ContaCorrente contaEnzo = new ContaCorrente(clienteEnzo, 1);
+		ContaCorrente conta2 = new ContaCorrente(borba,2);
 		
+		
+		//simulações
 		
 		
 		contaEnzo.depositar(10000);
@@ -20,6 +22,10 @@ public class Executavel {
 		
 		contaEnzo.consultaSaldo();
 		
+		contaEnzo.investir(1000,2);
+		
+		contaEnzo.consultaSaldo();		
 	}
+
 
 }
