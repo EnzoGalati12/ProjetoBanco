@@ -1,15 +1,29 @@
 package br.com.banco;
 
-//proibe a instancia da class
+import java.util.Calendar;
+import java.util.Date;
+
+//abstract : não pode ser instanciada
 public abstract class Conta {
 	
-	protected Cliente cliente;
-	protected int numConta;
+	//final no atributo trsnfma em constante
+	protected final Cliente cliente;
+	protected final int numConta;
 	protected double saldo;
+	protected Date dataAbertura = Calendar.getInstance().getTime();
+	private static long contador;
+	//static a variavel é da classe e n do objeto
+	
+	public static void exibirContador(){
+		System.out.println("Contas : " + contador);
+	}
+	
 
 	public Conta(Cliente clinte, int numConta) {
 		this.cliente = clinte;
 		this.numConta = numConta;
+		contador++;
+		this.dataAbertura = dataAbertura;
 		
 	}
 
@@ -37,6 +51,7 @@ public abstract class Conta {
 		}
 	}//
 
+	///abstract no método força sua rescrita
 	public abstract void consultaSaldo();
 		
 	

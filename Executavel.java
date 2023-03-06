@@ -25,6 +25,8 @@ public class Executavel {
 		contaEnzo.investir(1000,2);
 		
 		contaEnzo.consultaSaldo();		
+		
+		Conta.exibirContador();
 	}
 
 

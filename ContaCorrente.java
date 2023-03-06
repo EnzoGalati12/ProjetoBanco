@@ -1,7 +1,7 @@
 package br.com.banco;
 
-public class ContaCorrente extends Conta {// subclass
-
+public final class ContaCorrente extends Conta {// subclass
+// final não permite que herde desta classe
 	private double saldoInvestimento;
 
 	public ContaCorrente(Cliente clinte, int numConta) {
@@ -33,8 +33,10 @@ public class ContaCorrente extends Conta {// subclass
 	@Override
 	public void consultaSaldo() {
 		System.out.println("Cliente :"+ this.cliente.getNome());
+		System.out.println("Data de abertura : "+ this.dataAbertura);
 		System.out.println("Saldo :"+ this.saldo);
 		System.out.println("Saldo Investimento :"+ saldoInvestimento);
+		
 		
 		
 		
