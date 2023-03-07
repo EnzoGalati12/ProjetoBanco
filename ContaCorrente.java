@@ -33,7 +33,7 @@ public final class ContaCorrente extends Conta {// subclass
 	@Override
 	public void consultaSaldo() {
 		System.out.println("Cliente :"+ this.cliente.getNome());
-		System.out.println("Data de abertura : "+ this.dataAbertura);
+		System.out.println("Data de abertura : "+ c.getTime());
 		System.out.println("Saldo :"+ this.saldo);
 		System.out.println("Saldo Investimento :"+ saldoInvestimento);
 		

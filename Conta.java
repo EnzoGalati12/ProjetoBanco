@@ -1,7 +1,6 @@
 package br.com.banco;
 
 import java.util.Calendar;
-import java.util.Date;
 
 //abstract : não pode ser instanciada
 public abstract class Conta {
@@ -10,7 +9,8 @@ public abstract class Conta {
 	protected final Cliente cliente;
 	protected final int numConta;
 	protected double saldo;
-	protected Date dataAbertura = Calendar.getInstance().getTime();
+	//protected Date dataAbertura = Calendar.getInstance().getTime();
+	protected Calendar c = Calendar.getInstance();
 	private static long contador;
 	//static a variavel é da classe e n do objeto
 	
@@ -23,7 +23,8 @@ public abstract class Conta {
 		this.cliente = clinte;
 		this.numConta = numConta;
 		contador++;
-		this.dataAbertura = dataAbertura;
+		c.getTime();
+		//this.dataAbertura = dataAbertura;
 		
 	}
 
